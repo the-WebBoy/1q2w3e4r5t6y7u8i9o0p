@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX-O</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>BOX-O</h1>
+            <p>Premium Box Management</p>
+        </header>
+
+        <!-- Main View (Customer List) -->
+        <div id="mainView" class="view">
+            <section class="input-section">
+                <h2>Add Customer</h2>
+                <input type="text" id="customerName" placeholder="Enter Customer Name" required>
+                <select id="boxType">
+                    <option value="15 kilo soda box">15 kilo soda box</option>
+                    <option value="15 kilo LGS box">15 kilo LGS box</option>
+                    <option value="25 kilo kundhani box">25 kilo kundhani box</option>
+                </select>
+                <input type="number" id="boxCount" placeholder="Number of Boxes" min="1" required>
+                <button onclick="addTransaction()">Add Transaction</button>
+            </section>
+
+            <section class="customer-list">
+                <h2>Customers</h2>
+                <ul id="customerList"></ul>
+            </section>
+
+            <section class="summary-section">
+                <h2>Tools</h2>
+                <button onclick="exportToCSV()">Export to CSV</button>
+                <input type="file" id="importFile" accept=".csv" onchange="importFromCSV(event)">
+                <label for="importFile" class="import-btn">Import CSV</label>
+            </section>
+        </div>
+
+        <!-- Customer Detail View -->
+        <div id="customerView" class="view" style="display: none;">
+            <button class="back-btn" onclick="showMainView()">← Back to Customers</button>
+            <h2 id="customerViewName"></h2>
+            <table id="customerTransactionTable">
+                <thead>
+                    <tr>
+                        <th>Box Type</th>
+                        <th>Quantity</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTransactionList"></tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Coded by <a href="https://www.instagram.com/shaheeem.me/" target="_blank">the.webboy</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

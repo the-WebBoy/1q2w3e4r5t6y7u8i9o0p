@@ -1,0 +1,196 @@
+/* Premium Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 15px;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #fff;
+}
+
+header p {
+    font-size: 1em;
+    margin: 5px 0 0;
+    color: #d1e0ff;
+}
+
+.view {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: #333;
+    flex: 1; /* Allow view to take available space */
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 0 0 15px;
+    color: #1e3c72;
+}
+
+input, select, button {
+    width: calc(100% - 20px);
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+button {
+    background: linear-gradient(90deg, #007bff, #00b4db);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0056b3, #0088b3);
+    transform: translateY(-2px);
+}
+
+.customer-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.customer-list li {
+    background: #f9f9f9;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.customer-list li:hover {
+    background: #e0e7ff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #1e3c72;
+    color: #fff;
+}
+
+.returned {
+    background-color: #d4edda;
+}
+
+.not-returned {
+    background-color: #f8d7da;
+}
+
+.back-btn {
+    background: #dc3545;
+    margin-bottom: 15px;
+}
+
+.back-btn:hover {
+    background: #b02a37;
+}
+
+/* CSV Import Button */
+#importFile {
+    display: none;
+}
+
+.import-btn {
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(90deg, #28a745, #34d058);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.import-btn:hover {
+    background: linear-gradient(90deg, #218838, #2eb84c);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    color: #d1e0ff;
+}
+
+footer a {
+    color: #00b4db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    th, td {
+        font-size: 10px;
+        padding: 6px;
+    }
+    button {
+        font-size: 12px;
+    }
+    footer {
+        font-size: 0.8em;
+    }
+}
